@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TV Latino Plus - ¡Descárgala ahora!</title>
+  <style>
+    /* ----- RESET GENERAL ----- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #0d0d0d;
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* ----- IMAGEN DE FONDO ----- */
+    body::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: url('fondo.png') no-repeat center center/cover;
+      opacity: 0.35;
+      z-index: 0;
+    }
+
+    /* ----- CONTENIDO ----- */
+    .container {
+      z-index: 1;
+      padding: 20px;
+      max-width: 700px;
+      backdrop-filter: blur(4px);
+    }
+
+    h1 {
+      font-size: 3em;
+      color: #FF4D6D;
+      text-shadow: 0 0 15px rgba(255, 77, 109, 0.6);
+      margin-bottom: 10px;
+    }
+
+    /* ----- LOGO ----- */
+    .logo {
+      width: 130px;
+      height: auto;
+      margin: 10px auto 25px;
+      animation: pulse 2.5s ease-in-out infinite;
+      filter: drop-shadow(0 0 10px rgba(255, 77, 109, 0.6));
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.08); }
+      100% { transform: scale(1); }
+    }
+
+    p {
+      font-size: 1.1em;
+      line-height: 1.6;
+      opacity: 0.9;
+      margin-bottom: 20px;
+    }
+
+    strong {
+      color: #fff;
+    }
+
+    .highlight {
+      color: #FF4D6D;
+      font-weight: 600;
+    }
+
+    /* ----- BOTÓN DE DESCARGA ----- */
+    .download-btn {
+      background: linear-gradient(90deg, #FF4D6D, #FF9A8B);
+      color: #fff;
+      font-size: 1.2em;
+      padding: 15px 40px;
+      border: none;
+      border-radius: 50px;
+      text-transform: uppercase;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+      box-shadow: 0 0 15px rgba(255, 77, 109, 0.5);
+    }
+
+    .download-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px rgba(255, 77, 109, 0.8);
+    }
+
+    footer {
+      position: absolute;
+      bottom: 15px;
+      font-size: 0.9em;
+      color: #ccc;
+      z-index: 1;
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 2.2em; }
+      p { font-size: 1em; }
+      .download-btn { padding: 12px 30px; font-size: 1em; }
+      .logo { width: 100px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>TV Latino Plus</h1>
+
+    <!--  LOGO DE LA APP -->
+    <img src="logo.png" alt="Logo TV Latino Plus" class="logo">
+
+    <p> ¡Vive la mejor experiencia de entretenimiento!  
+      Disfruta de tus <span class="highlight">canales favoritos</span> de Latinoamérica, películas, deportes, noticias y mucho más, todo en una sola app.
+    </p>
+    <p><strong>Rápida, ligera y con la mejor calidad de transmisión.</strong><br>
+      ¡Miles de usuarios ya disfrutan de <span class="highlight">TV Latino Plus</span>, únete tú también!</p>
+
+    <a href="TU_ENLACE_DE_DESCARGA_AQUI" class="download-btn">Descargar Ahora</a>
+  </div>
+
+  <footer>© 2025 TV Latino Plus · Todos los derechos reservados</footer>
+</body>
+</html>
